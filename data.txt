@@ -1,0 +1,188 @@
+Major Project Synopsis 
+on
+HYBRID CRYPTOGRAPHY
+In partial fulfillment of requirements for the degree 
+of
+BACHELOR OF TECHNOLOGY
+IN
+COMPUTER SCIENCE & ENGINEERING
+Submitted by:
+YAJENDRA PRAJAPATI [19100BTCMCI05568]
+SANSKAR SINGHAI [19100BTCMCI05554]
+SAKSHI ROHIDA [19100BTCMCI05551]
+VIKRAM ABID [19100BTCMCI05567]
+Under the guidance of 
+Ms. Shweta Jain 
+ 
+DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
+SHRI VAISHNAV INSTITUTE OF INFORMATION TECHNOLOGY
+SHRI VAISHNAV VIDYAPEETH VISHWAVIDYALAYA, INDORE
+JUL-DEC-2022
+
+
+SHRI VAISHNAV INSTITUTE OF INFORMATION TECHNOLOGY
+DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
+
+GUIDELINES FOR MAJOR PROJECT SYNOPSIS
+
+
+ABSTRACT
+
+The information over internet is becoming a critical issue due to security problems. We have proposed a system for securing the important data from a file i.e., Hybrid Cryptography. Cryptography is a method of protecting information and communications through the use of codes, so that only those for whom the information is intended can read and process it. In this, Cryptography algorithms provides an effective way for protecting sensitive information. It is a method for storing and transmitting data in a form that is only readable by intended users. 
+
+Over encrypted data, steganography is used to enhanced security. In steganography, the message is to be hidden inside the cover–media. The use of steganography is combined with encryption as an extra step for hiding or protecting data. Later, user can decrypt using Steganographic image.
+
+1. INTRODUCTION 
+
+As the foundation of modern security systems, cryptography is used to secure transactions and communications, safeguard personal identifiable information and other confidential data, authenticate identity, prevent document tampering, and establish trust between servers.
+
+Encryption is the method by which information is converted into secret code that hides the information's true meaning. The science of encrypting and decrypting information is called cryptography. In computing, the original data is also known as plaintext, and encrypted data is called ciphertext. As a type of encryption, Symmetric encryption is used as it uses a single key to encrypt and decrypt. When the file is being uploaded on the server, the file gets converted into byte array. The byte array will further divide into three different parts and each part is encrypted into respective techniques namely, AES [3], DES [4] and RC5 [8].
+
+To prevent the key to be accessed by unauthorized user steganography is being used. Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection, the secret data is then extracted at its destination. The purpose of steganography is to conceal and deceive. It is a form of covert communication and can involve the use of any medium to hide messages. It's not a form of cryptography, because it doesn't involve scrambling data or using a key. Instead, it is a form of data hiding and can be executed in clever ways.
+
+
+
+
+
+
+
+2. PROBLEM DOMAIN 
+
+The most significant drawback of symmetric key encryption is that the key must be communicated to the party with which you share data. Encryption keys aren't just plain text strings like passwords. They are essentially absurd blocks. As a result, we need a secure method of delivering the key to the other party. Generally, there is no need to use encryption in the first place if we have a secure mechanism to communicate the key. With this in mind, symmetric key encryption is particularly beneficial for encrypting your data rather than distributing encrypted data.
+
+If the security is compromised, there is risk to more damage. When someone obtains a symmetric key, they can decode anything that has been encrypted with that key. When two-way communications are encrypted by symmetric encryption, both sides of the conversation are vulnerable. Someone who obtains your private key can decode communications sent to you, but they won't decipher messages sent to the other person because they are encrypted with a different key pair.
+ 
+The message's origin and authenticity cannot be guaranteed, because both the sender and the recipient have the same key, messages cannot be validated as coming from a specific user. If there is a disagreement, this might be a problem.
+
+3. SOLUTION DOMAIN 
+
+Hybrid cryptography used in the project, combines the current encryption techniques with three new methods. When a user uploads data, it is divided into three sections, the first of which is encrypted with AES [3], the second with DES [4], and the third with RC5[8]. LSB steganography [9] is used to store the keys in the image, and the three encrypted files are stored in the cloud. Users must first recover the keys from the image before they can import all data from the server. These keys are then used to decrypt the data once more with AES [3], DES [4], and RC5 [8]. This approach increases the security of records.
+
+Techniques and Algorithms used are:
+
+•	AES: Advanced Encryption Standard (AES) is a specification for the encryption of electronic data. AES is widely used today as it is a much stronger than DES. AES is a block cipher. The key size can be 128/192/256 bits. It encrypts the data in blocks of 128 bits each. That means it takes 128 bits as input and outputs 128 bits of encrypted cipher text as output. AES relies on substitution-permutation network principle which means it is performed using a series of linked operations which involves replacing and shuffling of the input data. [3]
+
+•	DES: The Data Encryption Standard (DES) is a symmetric-key block cipher. DES is an implementation of a Feistel Cipher It uses 16 round Feistel structure. The block size is 64-bit. Though, key length is 64-bit, DES has an effective key length of 56 bits, since 8 of the 64 bits of the key are not used by the encryption algorithm (function as check bits only). The DES algorithm uses a key of 56-bit size. Using this key, the DES takes a block of 64-bit plain text as input and generates a block of 64-bit cipher text. The DES process has several steps involved in it, where each step is called a round. Depending upon the size of the key being used, the number of rounds varies. [4]
+•	RC5: RC5 is a fast block cipher developed based on RC4. Set elements are reordered in RC5 algorithms. A distinct data block size, usually consisting of 64 bits, is transformed into another distinct-size block. Key size, block size and the number of rounds are convertible and variable in RC5 [8] ciphers. RC5 [8] uses key encryption and decryption as well as key expansion. It is notable for being simple, fast and consumes less memory.
+ 
+Architecture and Design
+
+ 
+
+Fig 1. For Encryption
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+Fig 2. For Decryption
+
+
+
+
+
+
+
+
+
+
+
+
+4. SYSTEM DOMAIN 
+
+Following are the requirements as per proposed idea:
+ 
+4.1	 Tools used: 
+•	PyCharm
+•	Visual Studio Code (v1.164.2) 
+•	GitHub 
+•	Git (v2.35.2)
+
+
+     4.2   The languages: 
+•	Python (v3.10.2): Python is often recommended as the first language people new to cybersecurity should learn because of its wide use and minimal learning curve. Python is an extremely useful programming language for cybersecurity professionals because it can perform a multitude of cybersecurity functions, including malware analysis, scanning, and penetration testing tasks.
+
+•	MySQL for database: MySQL is currently the most popular database management system software used for managing the relational database. It is open-source database software, which is supported by Oracle Company. It is fast, scalable, and easy to use database management system in comparison with Microsoft SQL Server and Oracle Database. 
+
+•	Django (Framework): Django is a web application framework written in Python programming language. It is based on MVT (Model View Template) design pattern. Django is in demand due to its rapid development feature.
+ 
+4.3	  Hardware Configurations:
+•	Processor: 1 gigahertz (GHz) or faster with two or more cores on a compatible 64-bit processor or system on a chip (Soc).
+•	RAM: 4 Gigabytes (GB) 
+•	Storage: 64 GB
+•	Operating System: Windows 7 and above
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. APPLICATION DOMAIN 
+
+All practical implementations of public key cryptography today employ the use of a hybrid system. Examples include the TLS protocol and the SSH protocol, that use a public-key mechanism for key exchange (such as Diffie-Hellman) and a symmetric-key mechanism for data encapsulation (such as AES). The OpenPGP file format and the PKCS file format are other examples.
+
+Although organizations should encrypt their own sensitive data, such as intellectual property data and more, so that only certain privileged employees can access that information. Proper access controls also contribute to the use of cryptography. In fact, unless organization’s IT security team operates on the least privileges principle, encrypting your trade secrets won’t work anywhere near as well as it can. File-level encryption works best for protecting specific folders and files from malicious insiders and prying intruders. Combined with proper access controls, file-level encryption is imperative.
+
+6. EXPECTED OUTCOME 
+
+The process of cryptography majorly relates to addon security. The appropriate result to hybrid cryptography is to secure data from unauthorized access as if the data won’t be modified or deleted. Hence, it enhances confidentially, integrity and security.  
+
+•	Data confidentiality (or privacy): Only an authorized recipient should be able to extract the contents of the message from its encrypted form. Resulting from steps to hide, stop, or delay free access to the encrypted information.
+
+•	Data integrity: The recipient should be able to determine if the message has been altered.
+
+•	Authentication: The recipient should be able to verify from the message, the identity of the sender, the origin or the path it traveled (or combinations) so as to validate claims from emitter or to validated the recipient expectations.
+
+•	Non-repudiation: The remitter should not be able to deny sending the message.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. REFERENCES
+
+1)	Putta Bharathi, Gayathri Annam, Jaya Bindu Kandi, Vamsi Krishna Duggana, Anjali T. Secure File Storage using Hybrid Cryptography. DOI: 10.1109/ICCES51350.2021.9489026. Date Added to IEEE Xplore: 02 August 2021.
+
+2)	Sherief Murad and Kamel H Rahouma. Hybrid Cryptography for Cloud Security: Methodologies and Designs. DOI:10.1007/978-981-16-2275-57. In book: Digital Transformation Technology (pp.129-140) (January 2022).
+
+3)	https://www.geeksforgeeks.org/advanced-encryption-standard-aes/
+
+4)	https://www.geeksforgeeks.org/data-encryption-standard-des-set-1/
+
+5)	https://www.geeksforgeeks.org/advanced-encryption-standard-aes/ 
+
+6)	https://www.simplilearn.com/what-is-des-article
+
+7)	https://www.geeksforgeeks.org/data-encryption-standard-des-set-1/
+
+8)	https://www.geeksforgeeks.org/rc5-encryption-algorithm/#
+
+9)	https://towardsdatascience.com/hiding-data-in-an-image-image-steganography-using-python-e491b68b1372
+
