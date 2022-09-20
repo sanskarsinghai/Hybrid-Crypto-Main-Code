@@ -9,8 +9,8 @@ t=""
 iv=""
 di=""
 lu=list()
+# use=""
 o=""
-use=int(input("Enter user id: -"))
 
 userd={
     9691513053:['sanskar','singhai','12-09-2001',9691513053,'sanskar12singhai@gmail.com'],
@@ -20,7 +20,9 @@ userd={
 }
 
 def stegnoimg():
-    global t,iv,di,lu,o,use
+    global t,iv,di,lu,o#,use
+    # use=int(input("Enter user id: -"))
+
     print("Stegnographic process is in progress..............")
     
     clear_message = lsb.reveal("s1.png")
@@ -36,13 +38,13 @@ def stegnoimg():
     
     o=int(s[25])
     
-    for i in s[25:]:
-        #owner is also include in lu list
-        lu.append(int(i))
+    # for i in s[25:]:
+    #     #owner is also include in lu list
+    #     lu.append(int(i))
 
-    if use not in lu:
-        print("You are no authorized to decypt this file")
-        exit()
+    # if use not in lu:
+    #     print("You are no authorized to decypt this file")
+    #     exit()
 
     iv=int(s[20])
     di=int(s[21])

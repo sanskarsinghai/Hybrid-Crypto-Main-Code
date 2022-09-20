@@ -3,7 +3,7 @@ import desc
 import merge as m
 import os
 
-print("Decryption process started: -")
+print("\nDecryption process started: -")
 print()
 
 l=de.stegnoimg()

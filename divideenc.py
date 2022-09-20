@@ -12,9 +12,23 @@ def stegnoimg():
         c+=chr(a)
     s=c.split(',')
 
+    use=int(input("Enter user id: -"))
+
+    lu=list()
+    o=int(s[25])
+    
+    for i in s[25:]:
+        #owner is also include in lu list
+        lu.append(int(i))
+
+    if use not in lu:
+        print("You are not authorized to decypt this file")
+        exit()
+
     a=int(s[22])
     d=int(s[23])
     r=int(s[24])
+
 
     print("Stegnographic process is completed")
 
@@ -32,5 +46,5 @@ def DiviIn3(l):
 
     # os.remove("f2\mergeenc.bin")
 
-l=stegnoimg()
-DiviIn3(l)
+# l=stegnoimg()
+# DiviIn3(l)
