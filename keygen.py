@@ -3,7 +3,7 @@ import random as ra
 #if any users have same name or same dob or other thing same so it may be risk of same key generation
 # or attacker may generate the account by using user details
 
-l=['sanskar','singhai','12-09-2001',9691513053,'sanskar12singhai']
+l=['sanskar','singhai','12-09-2001',9691513053,'sanskar12singhai@gmail.com']
 v=list(range(0,5))
 s=''
 t=''
