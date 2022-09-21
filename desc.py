@@ -68,10 +68,12 @@ def keygen():
     for i in range(6,len(t)):
         d+=s[int(t[i])]
     
-    if t[0]=="l":
-        d+=str(l[3])
-    else:
-        d=str(l[3])+d
+    # if t[0]=="l":
+    #     d+=str(l[3])
+    # else:
+    #     d=str(l[3])+d
+
+    d=d[:int(t[0])]+str(l[3])+d[int(t[0]):]
 
     key=d.encode('utf-8')
 

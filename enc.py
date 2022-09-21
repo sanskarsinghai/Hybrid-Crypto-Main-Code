@@ -1,4 +1,5 @@
 from telnetlib import PRAGMA_HEARTBEAT
+from turtle import pen
 import pyaes, secrets
 from des import DesKey
 from arc4 import ARC4
@@ -32,19 +33,22 @@ def keygen():
         s+=l[v[0]]
     t+=str(v[0])+','
     
-    p=ra.choice(['s','l'])
+    p=ra.choice(range(0,14))
     for _ in range(0,14):
        a=ra.choice(range(0,len(s)))
        t+=str(a)+','
        key+=s[a]
 
-    if p=='l':
-        key+=str(l[3])
-    else:
-        key=str(l[3])+key
+    # if p=='l':
+    #     key+=str(l[3])
+    # else:
+    #     key=str(l[3])+key
+
+    
+    key=key[:p]+str(l[3])+key[p:]
 
     t=t[:len(t)-1]
-    t=p+','+t
+    t=str(p)+','+t
 
     key=key.encode('utf-8')
     

@@ -27,17 +27,47 @@ print(s)
 
 k=''
 c=0
-for _ in range(0,16):
-    a=ra.choice(range(0,len(s)))
-    t+=str(a)+','
-    k+=s[a]
-    c+=1
+
+# for _ in range(0,16):
+#     a=ra.choice(range(0,len(s)))
+#     t+=str(a)+','
+#     k+=s[a]
+#     c+=1
+# t=t[:len(t)-1]
+
+p=ra.choice(range(0,14))
+for _ in range(0,14):
+       a=ra.choice(range(0,len(s)))
+       t+=str(a)+','
+       k+=s[a]
+# if p=='l':
+#         k+=str(l[3])
+# else:
+#         k=str(l[3])+k
+
+k=k[:p]+str(l[3])+k[p:]
+
 t=t[:len(t)-1]
+t=str(p)+','+t
+#till
 print(k)
 
 de=t.split(',')
 
+# d=''
+# for i in range(5,len(de)):
+#     d+=s[int(de[i])]
+
 d=''
-for i in range(5,len(de)):
-    d+=s[int(de[i])]
+for i in range(6,len(de)):
+        d+=s[int(de[i])]
+    
+# if t[0]=="l":
+#         d+=str(l[3])
+# else:
+#         d=str(l[3])+d
+
+d=d[:int(de[0])]+str(l[3])+d[int(de[0]):]
+#till
+
 print(d)
